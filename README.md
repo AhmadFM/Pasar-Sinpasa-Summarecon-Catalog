@@ -8,7 +8,7 @@ Semua anggota tim berkontribusi dalam perancangan **UI/UX & Analisis HCI** (User
 * **Ahmad Fuad Mubarak** - Project Manager & Fullstack Developer
 * **Raissa Fasya Sabila** - Frontend Developer (HTML & CSS Layouting)
 * **Niranti Salmanabilah** - Frontend Developer (JavaScript & PHP Logic)
-* **[Nama Teman 3]** - Database Engineer (PHP & MySQL Management)
+* **Resti Fujianti** - Database Engineer (PHP & MySQL Management)
 
 ---
 
