@@ -1,11 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  /* Green */
+  --green-light: rgba(230, 246, 238, 1);
+  --green-light-hover: rgba(217, 242, 230, 1);
+  --green-light-active: rgba(176, 228, 204, 1);
+
+  --green-normal: rgba(0, 168, 89, 1);
+  --green-normal-hover: rgba(0, 151, 80, 1);
+  --green-normal-active: rgba(0, 134, 71, 1);
+
+  --green-dark: rgba(0, 126, 67, 1);
+  --green-dark-hover: rgba(0, 101, 53, 1);
+  --green-dark-active: rgba(0, 76, 40, 1);
+
+  --green-darker: rgba(0, 59, 31, 1);
+
+  /* Yellow */
+  --yellow-light: rgba(254, 244, 230, 1);
+  --yellow-light-hover: rgba(253, 239, 217, 1);
+  --yellow-light-active: rgba(251, 221, 176, 1);
+
+  --yellow-normal: rgba(243, 146, 0, 1);
+  --yellow-normal-hover: rgba(219, 131, 0, 1);
+  --yellow-normal-active: rgba(194, 117, 0, 1);
+
+  --yellow-dark: rgba(182, 110, 0, 1);
+  --yellow-dark-hover: rgba(146, 88, 0, 1);
+  --yellow-dark-active: rgba(109, 66, 0, 1);
+
+  --yellow-darker: rgba(85, 51, 0, 1);
+
+  /* Text */
+  --text-black: rgba(12, 12, 12);
+  --text-white: rgba(255, 255, 255, 1);
+}
+
+.text-black {
+  color: var(--text-black);
+}
+
+.text-white {
+  color: var(--text-white);
+}
+
+.background {
+    color: #E8E8E3;
+}
+
 html{
     height: 100vh;
 }
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
   background: #f5f5f5;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.3em;
+}
+
+h1 {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1em;
+}
+
+h2 {
+  font-family: 'Manrope', sans-serif;
+}
+
+h3 {
+  font-family: 'Manrope', sans-serif;
 }
 
 .navbar {
@@ -23,26 +89,30 @@ body {
   justify-content: space-between;
 }
 
-.logo h1 {
-  margin: 0;
-  color: #2f8f5b;
-  font-weight: 700;
+.logo {
+  max-width: fit-content;
 }
 
-.logo-small {
-  font-size: 10px;
-  color: #999;
+.menu {
+  text-decoration: none;
+  color: var(--text-black);
+  font-weight: 500;
+  font-size: small;
+  font-family: 'Be Vietnam Pro';
+  line-height: 20px;
+  letter-spacing: 1px;
 }
 
-.nav-menu a {
+.menu :hover {
+  color: var(--green-normal-hover);
+}
+
+.menu a {
   margin: 0 12px;
   text-decoration: none;
-  color: #333;
-  font-size: 14px;
-}
-
-.nav-menu a:hover {
-  color: #2f8f5b;
+  color: var(--text-black);
+  font-weight: 500;
+  text-align: center;
 }
 
 .nav-icon {
@@ -56,7 +126,7 @@ body {
   margin: 20px auto;
   height: 420px;
   border-radius: 20px;
-  background: url('hero.jpg') center/cover no-repeat;
+  background: url('../img/yana+mulyana-1393199944.jpg') center/cover no-repeat;
   position: relative;
   overflow: hidden;
 }
@@ -69,30 +139,35 @@ body {
 }
 
 .hero-content {
-  position: relative;
-  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--text-white);
   z-index: 2;
-  max-width: 600px;
+  max-width: 900px;
   padding: 40px;
 }
 
 .hero-content h1 {
-  font-size: 36px;
+  font-size: 3em;
   margin-bottom: 16px;
 }
 
 .hero-content p {
-  font-size: 14px;
+  font-size: 1em;
   margin-bottom: 20px;
+  font-family: 'Be Vietnam Pro';
+  line-height: 28px;
 }
 
 .btn-primary {
-  background: #2f8f5b;
+  background: var(--green-normal-active);
   color: #fff;
-  padding: 12px 20px;
+  padding: 12px 28px;
   border-radius: 25px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: small;
+  font-family: 'Be Vietnam Pro';
 }
 
 .kategori {
@@ -130,6 +205,7 @@ body {
   padding: 16px;
   color: #fff;
   font-weight: 600;
+  text-decoration: none;
   overflow: hidden;
 }
 
@@ -141,6 +217,7 @@ body {
     to top,
     rgba(0,0,0,0.5),
     rgba(0,0,0,0.1)
+  
   );
 }
 
@@ -152,25 +229,45 @@ body {
 /* 🔥 SIZE VARIATION */
 
 /* 2x2 */
+
 .large {
   grid-column: span 2;
   grid-row: span 2;
+  font-size: larger;
 }
 
 /* 1x2 (tinggi) */
 .tall {
   grid-row: span 2;
+  font-size: large;
 }
 
 /* 2x1 (lebar) */
 .wide {
   grid-column: span 2;
+  font-size: large;
 }
 
 /* 1x1 */
 .small {
   grid-column: span 1;
   grid-row: span 1;
+  font-size: medium;
+}
+
+.detail {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: small;
+}
+
+.detail a {
+  color: var(--green-normal);
+}
+
+.detail img {
+  padding-left: 1rem;
+  align-items: center;
 }
 
 .fasilitas {
@@ -248,7 +345,7 @@ body {
 .testimoni-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
-  gap: 20px;
+  gap: 2rem;
   margin-top: 40px;
 }
 
@@ -265,8 +362,9 @@ body {
 }
 
 .testi-card p {
-  font-size: 13px;
+  font-size: small;
   color: #555;
+  text-align: justify;
 }
 
 .user {
@@ -274,12 +372,23 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  letter-spacing: normal;
 }
 
 .user img {
-  width: 35px;
-  height: 35px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-time {
+  margin: 0;
+  margin-top: 2px;
 }
 
 .footer {
@@ -292,18 +401,36 @@ body {
   width: 90%;
   max-width: 1100px;
   margin: auto;
-  display: flex;
   justify-content: space-between;
   gap: 40px;
 }
 
-.footer-col h3,
-.footer-col h4 {
-  margin-bottom: 10px;
+.footer-col {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  gap: 3rem;
 }
 
-.footer-col p,
-.footer-col a {
+.tentang {
+  grid-column: span 2;
+}
+
+.tentang h3 {
+  margin-bottom: 1rem;
+}
+
+.tentang p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.info h4 {
+  margin-bottom: 1rem;
+}
+
+.info a {
   font-size: 13px;
   color: #555;
   display: block;
