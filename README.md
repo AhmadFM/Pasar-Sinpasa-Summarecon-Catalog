@@ -37,19 +37,20 @@ Semua anggota tim berkontribusi dalam perancangan **UI/UX & Analisis HCI** (User
 3. Import file `database/migration.sql` untuk struktur tabel.
 
 ### 2. Setup Backend
-1. Masuk ke folder server: `cd server`
 
 ### 3. Setup Frontend
-1. Masuk ke folder client: `cd client`
-2. Buka file `index.html`
 
 ---
 
 ## 📂 Struktur Folder
 ```text
 .
-├── client/          # Antarmuka Pengguna (Frontend)
-├── server/          # Logika Bisnis & API (Backend)
-├── database/        # Skema SQL & Data Seed
-├── docs/            # Dokumentasi HCI, Link Figma, & Laporan
+├── src/             # Source code (Frontend)
+    ├── css/         # css
+    ├── img/         # gambar
+    ├── js/          # logika js
+    └── pages/       # file hmtl
+├── docs/            # Dokumentasi, Link Figma, & Laporan 
+├── .gitignore/
+├── LICENSE/
 └── README.md
