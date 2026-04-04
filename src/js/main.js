@@ -1,9 +1,3 @@
-// Guides
-// Variabel gunakan lowercase
-// Fungsi camelCase
-// CONSTANTA gunakan UPPERCASE
-
-
 // NAVBAR SEARCH
 const searchToggle = document.getElementById("searchToggle");
 const navSearch = document.querySelector(".nav-search");
