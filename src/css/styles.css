@@ -864,6 +864,40 @@ nav a.active::after {
   text-align: justify;
 }
 
+/* Desktop size */
+@media (min-width: 1024px) {
+  .hero::after{
+    transition: 0.4s;
+  }
+  .hero-content {
+    transform: translateY(40px);
+    transition: 0.4s;
+  }
+
+  .btn-primary {
+  transform: translateY(20px);
+  opacity: 0; /* 🔥 ini kunci */
+  transition: 0.4s;
+}
+
+  .hero:hover::after {
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.7),
+      rgba(0,0,0,0.4)
+    );
+  }
+
+  .hero:hover .hero-content {
+    transform: translateY(0);
+  }
+
+  .hero:hover .btn-primary {
+  transform: translateY(0);
+  opacity: 1;
+}
+}
+
 /* Tablet size */
 @media screen and (480px < width <= 768px) {
   .menu {
