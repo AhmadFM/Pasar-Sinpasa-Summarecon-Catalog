@@ -151,7 +151,6 @@ h3 {
 
 .menu :active {
   color: var(--green-normal-active);
-  text-decoration: underline solid;
 }
 
 .menu a {
@@ -499,8 +498,13 @@ h3 {
 
 .info h4 {
   margin-bottom: 1rem;
-  letter-spacing: 0.4;
+  letter-spacing: 0;
   color: var(--green-normal);
+  font-weight: 900;
+  font-size: small;
+  font-family: 'Be Vietnam Pro';
+  line-height: 20px;
+  letter-spacing: 1px;
 }
 
 .info a {
@@ -511,23 +515,36 @@ h3 {
   margin-bottom: 8px;
   text-decoration: none;
   text-align: left;
+  letter-spacing: 0.5px;
 }
 
-.social span {
+.social {
+  display: flex;
+  gap: 10px;
+}
+
+.social a {
   font-size: 20px;
   margin-right: 10px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  padding: 0.5rem;
-  width: 40;
-  height: 40;
+  padding: 0.2rem;
+  width: 40px;
+  height: 40px;
   background-color: #f4f4f4;
   border-radius: 50%;
+  margin-bottom: 0;
 }
 
-.social span:hover {
+.social img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.social a:hover {
     background-color: #e0e0e0;
 }
 
