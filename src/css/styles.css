@@ -43,6 +43,7 @@
 
 html{
   height: 100vh;
+  scroll-behavior: smooth;
 }
 
 /* Body Format */
@@ -52,6 +53,10 @@ body {
   font-family: 'Be Vietnam Pro', sans-serif;
   letter-spacing: 1px;
   line-height: 1.3em;
+}
+
+section {
+  scroll-margin-top: 8rem;
 }
 
 /* Heading Format */
