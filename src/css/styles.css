@@ -351,19 +351,40 @@ nav a.active::after {
   font-size: medium;
 }
 
+/* tulisan SEMUA KATALOG */
+
 .detail {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  font-size: small;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
 }
 
 .detail a {
   color: var(--green-normal);
+  text-decoration: none;
+}
+
+.detail span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .detail img {
-  padding-left: 1rem;
-  align-items: center;
+  width: 16px;
+  height: 16px;
+  transition: 0.3s;
+}
+
+.detail a:hover span {
+  transform: translateX(4px);
+}
+
+.detail a:hover img {
+  transform: translateX(4px);
 }
 
 .fasilitas {
