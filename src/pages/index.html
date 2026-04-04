@@ -17,12 +17,12 @@
             </div>
 
             <nav class="menu">
-                <a href="index.html">BERANDA</a>
-                <a href="katalog.html">KATALOG</a>
-                <a href="index.html">FASILITAS</a>
-                <a href="index.html">DENAH</a>
-                <a href="index.html">TESTIMONI</a>
-                <a href="index.html">TENTANG KAMI</a>
+                <a href="#hero" data-section="beranda">BERANDA</a>
+                <a href="katalog.html" data-section="kategori">Katalog</a>
+                <a href="#fasilitas" data-section="fasilitas">Fasilitas</a>
+                <a href="#denah" data-section="denah">Denah</a>
+                <a href="#testimoni" data-section="testimoni">Testimoni</a>
+                <a href="#footer" data-section="footer">TENTANG KAMI</a>
             </nav>
 
             <div class="nav-icon">
@@ -36,7 +36,7 @@
                 </div>
                 
                 <div class="icons">
-                    <svg class="hamburger" viewBox='0 0 10 8' width='24'>
+                    <svg class="hamburger" viewBox='0 0 10 8' width='24' >
                         <path 
                             d='M1 1h8M1 4h 8M1 7h8' 
                             stroke='#000' 
@@ -48,7 +48,8 @@
         </div>
     </header>
 
-    <section class="hero">
+    <main>
+        <section id="hero" class="hero">
     <div class="hero-content">
         <h1>Pasar Modern Sinpasa Kini Hadir di Summarecon Bandung</h1>
         <p>
@@ -59,7 +60,7 @@
     </div>
     </section>
 
-    <section class="kategori">
+    <section id="kategori" class="kategori">
     <h2>Kategori Pilihan</h2>
     <p class="subtitle">
         Temukan produk berkualitas tinggi setiap harinya dari mitra tenant terpilih kami.
@@ -93,7 +94,7 @@
     </div>
     </section>
 
-    <section class="fasilitas">
+    <section id="fasilitas" class="fasilitas">
     <h2>Fasilitas Lengkap</h2>
     <p class="subtitle">
         Kenyamanan Anda adalah prioritas kami saat berbelanja.
@@ -134,7 +135,7 @@
     </div>
     </section>
 
-    <section class="denah">
+    <section id="denah" class="denah">
     <h2>Temukan Rute Belanja Anda</h2>
     <p class="subtitle">
         Gunakan denah interaktif kami untuk menemukan produk yang dicari lebih cepat.
@@ -145,7 +146,7 @@
     </div>
     </section>
 
-    <section class="testimoni">
+    <section id="testimoni" class="testimoni">
         <h2>Kesan Pengunjung</h2>
 
         <div class="testimoni-grid">
@@ -198,7 +199,10 @@
         </div>
     </section>
 
-    <footer class="footer">
+    </main>
+
+    
+    <footer id="footer" class="footer">
         <div class="footer-container">
             <div class="footer-col">
                 <div class="tentang">
@@ -223,10 +227,14 @@
                     <h4>Ikuti Kami</h4>
                     <div class="social">
                         <span>
-                            <img src="../img/instagram.svg" alt="instagram-sinpasa">
+                            <a href="https://www.instagram.com/pasarsinpasabandung/" target="_blank">
+                                <img src="../img/instagram.svg" alt="instagram-sinpasa">
+                            </a>                       
                         </span>
                         <span>
-                            <img src="../img/tiktok.svg" alt="tiktok-sinpasa">
+                            <a href="https://www.tiktok.com/@pasarsinpasabandung" target="_blank">
+                                <img src="../img/tiktok.svg" alt="tiktok-sinpasa">
+                            </a>
                         </span>
                 </div>
                 
