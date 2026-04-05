@@ -1520,3 +1520,180 @@ body{
     .btn-edit{
         margin-bottom: 6px;
 }
+}
+/* Responsive Mobil */
+@media (max-width: 767px){
+    .login-container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .login-kiri, .register-kiri {
+        display: none; 
+    }
+
+    .login-kanan, .register-kanan {
+        width: 100%;
+        padding: 40px 20px;
+        margin: 0;
+        flex: none;
+    }
+
+    .login-kanan h2, .register-kanan h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .Sidebar {
+        flex-direction: column;
+    }
+    .navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+    }
+    .navbar .logo h3, .logo h5, .navbar .add, .atas, .bawah, .admin-teks, .admin-teks img{
+        display: none;
+    }
+    .navbar .header-mobile{
+        display: flex;
+        flex-direction: row;
+    }
+    .main-container {
+        width: 100%;
+    }
+
+    .header {
+        display:none;
+    }
+    .search-box{
+        display:none;
+    }
+    .teks{
+        display: flex;
+        flex-direction: column;
+    }
+    .teks-kanan .default{
+        padding:3px;
+        gap:0px;
+        text-align: left;
+    }
+    .admin-profile {
+        display:flex;
+        width: 100%;
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    .informasi {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .rangkuman {
+        width: 100% !important;
+    }
+
+    .Data .bagan {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bar-wrapper {
+        height: 200px; /* Perkecil tinggi grafik di mobile */
+        gap: 10px;
+    }
+
+    /* Form & Settings */
+    .data-input {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .data-left, .data-right {
+        width: 100%;
+    }
+
+    .time-operational {
+        grid-template-columns: repeat(2, 1fr) !important; /* Jadi 2 kolom saja */
+    }
+
+    .sosial-media {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-flex {
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    /* Tenant Management */
+    .market .market-tenant {
+        padding-right:2px;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap:0px;
+        box-sizing: border-box;
+    }
+    .market-text{
+        width:70%;
+        font-size: 14px;
+        gap:7px;
+    }
+    .market .market-tenant .tenant{
+        width:160px;
+    }
+    .market .market-tenant .tenant img{
+        padding:3px;
+    }
+    .setting-list{
+        padding-top: 20px;
+    }
+    .tenant {
+        margin-bottom: 10px;
+    }
+
+    /* Table Responsiveness */
+    .admin {
+        padding: 10px;
+    }
+
+    .user-table thead {
+        display: none;
+    }
+
+    .user-table, .user-table tbody, .user-table tr, .user-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .user-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .user-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* Menambahkan label manual untuk data tabel */
+    .user-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+    }
+}
