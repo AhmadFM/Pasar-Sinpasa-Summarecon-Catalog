@@ -23,6 +23,8 @@ body{
     gap:50px;
     align-items: center;
     position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 .login-kiri{
     margin:0;
@@ -32,10 +34,10 @@ body{
     flex-wrap: wrap;
 }
 .login-kiri img{
-    width: 110%;
-    height: 99vh;
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
 }
 .login-kiri .teks{
     position: absolute;
@@ -1002,7 +1004,6 @@ body{
 }
 .photo-left{
     width: 150px;
-    /* margin: 20px auto; */
 }
 #file-upload {
     display: none;
@@ -1084,6 +1085,7 @@ body{
     background-color: #ECFDF5;
     gap: 20px;
     margin-bottom: 30px;
+    width:100%;
 }
 .operational h2{
     font-size: 30px;
@@ -1110,10 +1112,9 @@ body{
     padding-right: 5px;
 }
 .operational .time-operational{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     gap: 15px;
-    width: 100%;
     margin-bottom: 20px;
 }
 .time-operational .time{
@@ -1126,7 +1127,7 @@ body{
     text-align: left;
     border-radius: 5px;
     padding-left: 20px;
-    width: 295px;
+    width: 100%;
     height: 70px;
     border: 1px solid black;
 }
@@ -1454,6 +1455,69 @@ body{
     border-radius: 5px; 
     cursor: pointer;
 }
-@media(max-width: 768px){
-
+/* Responsive Untuk Tab */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .login-container{
+        flex-direction: row;
+        padding-right: 20px;
+        gap: 30px;
+    }
+    .login-kanan, .register-kanan{
+        margin-bottom: 20px;
+        /* background-color: #ECFDF5; */
+        height: 70vh;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top:90px;
+        padding-bottom:90px;
+    }
+    .login-kanan h2, .login-kanan p{
+        margin-bottom: 30px;
+    }
+    .btn-sigin{
+        margin-top: 40px;
+    }
+    .role .default{
+        font-size: 6px;
+        width:23%;
+    }
+    .navbar {
+        width: 100px; 
+        padding: 4px 5px;
+    }
+    .navbar .logo h3{
+        padding-top:10px;
+        font-size: 16px;
+    }
+    .navbar .logo h5, .navbar .New, .navbar .atas a, .navbar .bawah a {
+        font-size: 0; /* Sembunyikan teks */
+        display: flex;
+        justify-content: center;
+    }
+    .navbar i {
+        font-size: 20px; /* Perbesar ikon */
+        margin: 0;
+    }
+    .rangkuman{
+        margin-bottom:20px;
+        height: 150px;
+    }
+    .rangkuman .kata{
+        padding-bottom: 60px;
+    }
+    .Data{
+        margin-bottom:20px;
+    }
+    .footer img{
+        border-radius: 5px;
+    }
+    .informasi {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+    .tenant {
+        flex: 0 0 calc(33.33% - 15px); 
+    }
+    .btn-edit{
+        margin-bottom: 6px;
+    }
 }

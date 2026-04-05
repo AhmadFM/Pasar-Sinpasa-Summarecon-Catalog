@@ -26,7 +26,7 @@ if(tenant){
     window.location.href='tenant.html';
 })
 }
-
+//Logout
 if (adminTrigger && logoutMenu) {
     adminTrigger.addEventListener('click', function(e) {
         e.stopPropagation(); 
@@ -37,16 +37,6 @@ if (adminTrigger && logoutMenu) {
     });
 }
 
-//save data
-if(saveData){
-    saveData.forEach(function(link){
-        link.addEventListener('click', function(e){
-            e.preventDefault();
-            window.location.href='setting-market.html';
-        })
-    })
-}
-
 //nambah tenant
 if(add){
     add.addEventListener('click', function(){
@@ -54,24 +44,20 @@ if(add){
     })
 }
 
-
-
-
-
-
-
-
-
-
-
-//Navbar
-// const navlink=document.querySelectorAll('nav a');
-// navlink.forEach(function(link){
-//     link.addEventListener('click', function(e){
-//         e.preventDefault();
-//         navlink.forEach(function(atas){
-//              atas.classList.remove('active');
-//         });
-//        this.classList.add('active')
-//     });
-// })
+if (saveData) {
+    saveData.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const halamanAsal = document.referrer;
+            if (halamanAsal.includes('tenant.html')) {
+                window.location.href = 'tenant.html';
+            } 
+            else if (halamanAsal.includes('setting-market.html')) {
+                window.location.href = 'setting-market.html';
+            } 
+            else {
+                window.location.href = 'dashboard.html'; 
+            }
+        });
+    });
+}
