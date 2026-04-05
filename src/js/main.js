@@ -35,7 +35,7 @@ function headerInteraction(){
   }
   
   // HAMBURGER
-  const hamburger = document.getElementById("hamburger");
+  const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".menu");
   
   if (hamburger && navMenu) {
