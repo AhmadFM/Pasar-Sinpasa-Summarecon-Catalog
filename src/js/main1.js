@@ -5,7 +5,7 @@ const saveData=document.querySelectorAll('.btn-save');
 const adminTrigger = document.getElementById('adminTrigger');
 const logoutMenu = document.getElementById('logoutMenu');
 const add=document.querySelector('.btn-market');
-const humbuger=document.queeySelector('.icon-menu');
+const humbuger=document.querySelector('.icon-menu');
 const navbar=document.querySelector('.atas');
 const form = document.querySelector("form");
 
