@@ -1,6 +1,5 @@
 // Fungsi untuk memuat komponen
 function loadComponent(elementId, filePath) {
-    // Kita return fetch-nya agar bisa dilacak kapan selesainya
     return fetch(filePath)
         .then(response => {
             if (!response.ok) throw new Error("Gagal memuat file: " + filePath);
@@ -15,13 +14,8 @@ function loadComponent(elementId, filePath) {
 // Fungsi untuk menandai menu yang sedang aktif
 function setActiveMenu() {
     let currentPage = window.location.pathname.split("/").pop();
-    
-    // Jika di Beranda, biarkan ScrollSpy yang mengambil alih urusan class .active
-    if (currentPage === "index.html" || currentPage === "") {
-        return; // Hentikan fungsi loader di sini
-    }
+    if (currentPage === "index.html" || currentPage === "") return;
 
-    // Jika di halaman lain (Katalog/Denah), beri penanda aktif
     const navLinks = document.querySelectorAll(".menu a");
     navLinks.forEach(link => {
         const linkHref = link.getAttribute("href").split("/").pop();
@@ -31,16 +25,24 @@ function setActiveMenu() {
     });
 }
 
-// Jalankan saat struktur HTML utama sudah dimuat oleh browser
+// Jalankan saat struktur HTML utama sudah dimuat
 document.addEventListener("DOMContentLoaded", () => {
     
     // 1. Muat header
     loadComponent("placeholder-header", "components/header.html")
-        .then(() => {
-            // 2. SETELAH header sukses dimuat, jalankan fungsi penanda menu
+        .then(() => { 
             setActiveMenu();
+            
+            // Panggil interaksi header
+            if (typeof headerInteraction === "function"){
+                headerInteraction();
+            }
+            // Panggil scrollspy SETELAH header muncul
+            if (typeof initScrollSpy === "function"){
+                initScrollSpy();
+            }
         });
 
-    // 3. Muat footer secara bersamaan
+    // 3. Muat footer
     loadComponent("placeholder-footer", "components/footer.html");
 });

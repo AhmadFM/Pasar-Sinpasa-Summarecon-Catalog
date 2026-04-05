@@ -896,6 +896,203 @@ nav a.active::after {
   text-align: justify;
 }
 
+/* Denah Interaktif */
+/* --- Efek Interaksi pada SVG Lapak --- */
+.lapak-sayur-buah-dan-jajanan, 
+.lapak-olahan-dan-jajanan, 
+.lapak-non-halal, 
+.lapak-basah, 
+.lapak-kuliner,
+.kios-besar,
+.kios-kecil,
+.kios-fnb,
+.atm,
+.mushola,
+.area-pengelola,
+.toilet {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+/* Membuat lapak sedikit meredup saat dihover untuk memberi visual feedback */
+.lapak-sayur-buah-dan-jajanan:hover, 
+.lapak-olahan-dan-jajanan:hover, 
+.lapak-non-halal:hover, 
+.lapak-basah:hover, 
+.lapak-kuliner:hover,
+.kios-besar:hover,
+.kios-kecil:hover,
+.kios-fnb:hover,
+.atm:hover,
+.mushola:hover,
+.area-pengelola:hover,
+.toilet:hover {
+    opacity: 0.7;
+}
+
+/* --- Tampilan Tooltip (Desktop) --- */
+#desktop-tooltip {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--green-normal);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    border: 1px solid #ddd;
+}
+
+/* Gaya tambahan untuk teks di dalam tooltip */
+.tooltip-title {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: #2C85B1;
+}
+
+.tooltip-category {
+    font-size: 12px;
+    color: #666;
+}
+
+/* --- Tampilan Info Card (Mobile & Klik Desktop) --- */
+.info-card {
+    position: fixed;
+    bottom: -100%; /* Sembunyikan jauh di bawah layar secara default */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Animasi slide up yang mulus */
+    z-index: 1001;
+    font-family: sans-serif;
+}
+
+/* Class ini akan ditambahkan oleh JavaScript untuk memunculkan Info Card */
+.info-card.show {
+    bottom: 0;
+}
+
+.info-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.info-card-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+#info-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.btn-kunjungi {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2C85B1; /* Warna tombol, bisa disesuaikan */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Tampilan Wadah & Tombol Filter */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.btn-filter {
+    padding: 8px 16px;
+    border: 2px solid #323232;
+    background-color: #ffffff;
+    color: #323232;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Warna tombol saat disorot atau sedang aktif */
+.btn-filter:hover, 
+.btn-filter.active {
+    background-color: #323232;
+    color: #ffffff;
+}
+
+
+.lapak-dimmed {
+    opacity: 0.1 !important; 
+    pointer-events: none;
+}
+
+/* --- Tampilan Tombol Zoom --- */
+.zoom-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.zoom-controls button {
+    padding: 8px 12px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #333;
+    transition: background-color 0.2s ease;
+}
+
+.zoom-controls button:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- Pengaturan Wadah agar Bisa Di-scroll --- */
+.denah-container {
+    overflow: auto;
+    max-height: 70vh; 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* --- Animasi Zoom pada SVG --- */
+.denah-container svg {
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: top left; 
+    min-width: 100%; 
+}
+
 /* Desktop size */
 @media (min-width: 1080px) {
   .hero::after{
@@ -908,7 +1105,7 @@ nav a.active::after {
 
   .btn-primary {
   transform: translateY(20px);
-  opacity: 0; /* 🔥 ini kunci */
+  opacity: 0;
   transition: 0.4s;
 }
 
