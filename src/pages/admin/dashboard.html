@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../../css/admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -19,10 +19,10 @@
         </div>
         <nav class="atas">
             <ul>
-                <li><a href="#"><i class="fa-solid fa-dashboard"></i>Dashboard</a></li>
-                <li><a href="#"><i class="fa-solid fa-box"></i>Tenant Management</a></li>
-                <li><a href="#"><i class="fa-solid fa-gear"></i>Market Setting</a></li>
-                <li><a href="#"><i class="fa-solid fa-user"></i>User Management</a></li>
+                <li><a href="dashboard.html"><i class="fa-solid fa-dashboard"></i>Dashboard</a></li>
+                <li><a href="tenant.html"><i class="fa-solid fa-box"></i>Tenant Management</a></li>
+                <li><a href="setting-market.html"><i class="fa-solid fa-gear"></i>Market Setting</a></li>
+                <li><a href="user-management.html"><i class="fa-solid fa-user"></i>User Management</a></li>
             </ul>
         </nav>
         <nav class="bawah">
@@ -41,12 +41,15 @@
                 </div>
             </div>
             <div class="header-right">
-                <div class="admin-profile">
+                <div class="admin-profile" id="adminTrigger">
                     <div class="admin-teks">
                         <i class="fa-solid fa-bell"></i>
-                        <span class="role">Admin</span>
-                    </div>
+                        <p class="role">Admin</p>
+                        </div>
                     <img src="https://i.pinimg.com/736x/61/eb/2e/61eb2e74a5d30179a2564459d0850ab9.jpg" alt="Foto dari belakang">
+                    <div class="dropdown-menu" id="logoutMenu">
+                        <a href="login.html" id="btnLogout">Logout</a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -106,44 +109,32 @@
                             </div>
                         </div>
                         <div class="bar-wrapper">
-                            <div class="bar-item">
-                                <div class="bar" style="height: 80%;"><span>80%</span></div>
-                                <p>Week 1</p>
-                            </div>
-                            <div class="bar-item">
-                                <div class="bar" style="height: 45%;"><span>45%</span></div>
-                                <p>Week 2</p>
-                           </div>
-                            <div class="bar-item">
-                                <div class="bar" style="height: 90%;"><span>90%</span></div>
-                                <p>Week 3</p>
-                            </div>
-                            <div class="bar-item">
-                                <div class="bar" style="height: 70%;"><span>70%</span></div>
-                                <p>Week 4</p>
-                            </div>
+                           <div class="bar" style="--persen: 80%"><span class="label">Minggu 1</span></div>
+                            <div class="bar" style="--persen: 45%"><span class="label">Minggu 2</span></div>
+                            <div class="bar" style="--persen: 90%"><span class="label">Minggu 3</span></div>
+                            <div class="bar" style="--persen: 60%"><span class="label">Minggu 4</span></div>
                         </div>
                     </div>
                     <div class="bagian-kanan">
                         <h5>Recent Activity</h5>
                         <div class="list-update">
-                            <p><i class="fa-solid fa-circle"></i><b>New Tenant added:</b> Asinan Jaya </p>
+                            <p><i class="fa-solid fa-circle"></i><b>New Tenant added:</b><i>Asinan Jaya</i></p>
                             <p class="tanggal">Today,03.03.2026</p>
                         </div>
                         <div class="list-update">
-                            <p><i class="fa-solid fa-circle"></i>New Tenant added: Asinan Jaya</p>
+                            <p><i class="fa-solid fa-circle"></i><b>Update Tenant Data:</b><i>Add new tenant</i></p>
                             <p class="tanggal">Today,03.03.2026</p>
                         </div>
                         <div class="list-update">
-                            <p><i class="fa-solid fa-circle"></i>New Tenant added: Asinan Jaya</p>
+                            <p><i class="fa-solid fa-circle"></i><b>New Tenant added:</b> <i>Rumah makan pinang</i></p>
                             <p class="tanggal">Today,03.03.2026</p>
                         </div>
                         <div class="list-update">
-                            <p><i class="fa-solid fa-circle"></i>New Tenant added: Asinan Jaya</p>
+                            <p><i class="fa-solid fa-circle"></i><b>New Tenant added:</b> <i>Sayuran Sehat dan Bersih</i></p>
                             <p class="tanggal">Today,03.03.2026</p>
                         </div>
                         <div class="list-update">
-                            <p><i class="fa-solid fa-circle"></i>New Tenant added: Asinan Jaya</p>
+                            <p><i class="fa-solid fa-circle"></i><b>New Tenant added:</b> <i>Kopi Turbuk</i></p>
                             <p class="tanggal">Today,03.03.2026</p>
                         </div>
                         <div class="view">
@@ -153,16 +144,21 @@
                 </div>
         </section>
         <section class="footer">
-                <img src="https://i.pinimg.com/1200x/2f/28/90/2f2890a91f9c3f47dddecc172882d518.jpg" alt="foto pasar">
+                <img src="https://i.pinimg.com/736x/04/3f/50/043f508c45e726ce84e4404fa48651e5.jpg" alt="foto pasar">
                 <div class="footer-teks">
                 <h5>FEATURED TENANT HIGHLIGHT</h5>
                 <h2>Sinpasa Summarecon Mall <br> Bandung</h2>
-                <p>Recognized for outstanding visitor engagement this <br> month. Their recent workshop series attacted over <br>
+                <p>Recognized for outstanding visitor engagement this <br> month. Their recent workshop series attacted over
                     <br>450 unique attendes, boosting traffic by <br>18%</p>
-                <button type="submit" class="btn-detail">View Tenant Detail</button>
+                <button type="submit" class="btn-detail">View All Tenant </button>
                 </div>
         </section>
     </div>
-    <script src="../router.js"></script>
+    </div>
+<<<<<<< HEAD:src/pages/dashboard.html
+    <script src="../js/main1.js"></script>
+=======
+    <script src="../../router.js"></script>
+>>>>>>> ee34a2ccbdb62a522f891aa8a3975e848ac59d6e:src/pages/admin/dashboard.html
 </body>
 </html>
